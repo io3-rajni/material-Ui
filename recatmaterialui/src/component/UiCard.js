@@ -52,41 +52,125 @@ export default function UiCard() {
                   gutterBottom
                   variant="h6"
                   component="div"
-                  style={{ margin: "0px", fontWeight: "800" }}
+                  style={{
+                    margin: "0px",
+                    display: "flex",
+                  }}
                 >
-                  City:{item?.address?.city}
+                  <Typography
+                    sx={{
+                      fontWeight: "800",
+                      color: "darkBlue",
+                    }}
+                  >
+                    City :
+                  </Typography>
+                  <Typography sx={{ fontWeight: "800", color: "black" }}>
+                    {item?.address?.city}
+                  </Typography>
                 </Typography>
                 <div>
-                  <h4 style={{ margin: "0px", color: "darkblue" }}>
-                    Name:{item?.firstName}
+                  <h4
+                    style={{
+                      margin: "0px",
+                      color: "darkblue",
+                      display: "flex",
+                    }}
+                  >
+                    <Typography variant="subtitle">Name:</Typography>{" "}
+                    <Typography sx={{ color: "black" }}>
+                      {item?.firstName}
+                    </Typography>
                   </h4>
-                  <h4 style={{ margin: "0px", color: "darkblue" }}>
-                    DOB:{item?.birthDate}
+                  <h4
+                    style={{
+                      margin: "0px",
+                      color: "darkblue",
+                      display: "flex",
+                    }}
+                  >
+                    <Typography variant="subtitle">DOB:</Typography>
+                    <Typography sx={{ color: "black" }}>
+                      {item?.birthDate}
+                    </Typography>
                   </h4>
-                  <h4 style={{ margin: "0px", color: "darkblue" }}>
-                    Email:{item?.email}
+                  <h4
+                    style={{
+                      margin: "0px",
+                      color: "darkblue",
+                      display: "flex",
+                    }}
+                  >
+                    <Typography variant="subtitle">Email:</Typography>
+                    <Typography sx={{ color: "black" }}>
+                      {item?.email}
+                    </Typography>{" "}
                   </h4>
-                  <h4 style={{ margin: "0px", color: "darkblue" }}>
-                    Gender:{item?.gender}
+                  <h4
+                    style={{
+                      margin: "0px",
+                      color: "darkblue",
+                      display: "flex",
+                    }}
+                  >
+                    <Typography variant="subtitle"> Gender:</Typography>
+                    <Typography sx={{ color: "black" }}>
+                      {item?.gender}
+                    </Typography>
                   </h4>
-                  <h5 style={{ margin: "0px", color: "darkblue" }}>
-                    Currency:{item?.bank?.currency}
-                  </h5>
-                  <h5 style={{ margin: "0px", color: "darkblue" }}>
-                    Card Number:{item?.bank?.cardNumber}
-                  </h5>
-                  <h5 style={{ margin: "0px", color: "darkblue" }}>
-                    Card Expire:{item?.bank?.cardExpire}
-                  </h5>
+                  <h4
+                    style={{
+                      margin: "0px",
+                      color: "darkblue",
+                      display: "flex",
+                    }}
+                  >
+                    <Typography variant="subtitle">Currency:</Typography>
+                    <Typography sx={{ color: "black" }}>
+                      {item?.bank?.currency}
+                    </Typography>
+                  </h4>
+                  <h4
+                    style={{
+                      margin: "0px",
+                      color: "darkblue",
+                      display: "flex",
+                    }}
+                  >
+                    <Typography variant="subtitle"> Card Number:</Typography>
+                    <Typography sx={{ color: "black" }}>
+                      {item?.bank?.cardNumber}
+                    </Typography>
+                  </h4>
+                  <h4
+                    style={{
+                      margin: "0px",
+                      color: "darkblue",
+                      display: "flex",
+                    }}
+                  >
+                    <Typography variant="subtitle"> Card Expire:</Typography>
+                    <Typography sx={{ color: "black" }}>
+                      {item?.bank?.cardExpire}
+                    </Typography>
+                  </h4>
+
+                  <h4
+                    style={{
+                      margin: "0px",
+                      color: "darkblue",
+                      display: "flex",
+                    }}
+                  >
+                    <Typography variant="subtitle" color="darkBlue">
+                      UserAgent:
+                    </Typography>
+                    <Typography sx={{ color: "black" }}>
+                      {item?.userAgent}
+                    </Typography>
+                  </h4>
                 </div>
-                <Typography color="text.secondary">
-                  userAgent:{item?.userAgent}
-                </Typography>
               </CardContent>
-              {/* <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
-              </CardActions> */}
             </Card>
           );
         })}
